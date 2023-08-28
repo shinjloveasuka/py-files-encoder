@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+
+class SuperMan():
+
+    # 类变量
+    name = ''
+
+    # 静态方法
+    @staticmethod
+    def fly():
+        print("i can fly!")
+
+    def who(self):
+        print("My name is %s" %self.name)
+
+class LittleSuperMan(SuperMan):
+
+    # 重写父类who方法
+    def who(self):
+        print("i'm little superman,name is %s" %self.name)
+
+if __name__ == '__main__':
+    SuperMan.fly()
+    s = SuperMan()
+    s.name = "超人"
+    s.who()
+
+    LittleSuperMan.fly()
+    l = LittleSuperMan()
+    l.name = "小超人"
+    l.who()
